@@ -1,0 +1,63 @@
+{
+  "name": "hackathon-london",
+  "version": "1",
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "lint": "eslint --fix \"**/*.{js,ts,tsx}\"",
+    "prettier": "prettier --config .prettierrc \"**/*.{ts,tsx,js}\" --write"
+  },
+  "dependencies": {
+    "@ant-design/icons": "5.2.6",
+    "@lighthouse-web3/sdk": "^0.2.8",
+    "@web3inbox/core": "^0.0.22",
+    "@web3inbox/widget-react": "^0.6.25",
+    "@web3modal/wagmi": "^3.3.2",
+    "antd": "5.10.0",
+    "buffer": "^6.0.3",
+    "ethers": "5.7.2",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-router-dom": "^6.19.0",
+    "react-scripts": "5.0.1",
+    "swr": "^2.2.4",
+    "viem": "^1.19.3",
+    "wagmi": "^1.4.7"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-private-property-in-object": "7.21.11",
+    "@types/jest": "29.5.5",
+    "@types/node": "20.8.6",
+    "@types/react": "18.2.28",
+    "@types/react-dom": "18.2.13",
+    "@typescript-eslint/eslint-plugin": "6.7.5",
+    "@typescript-eslint/parser": "6.7.5",
+    "dotenv": "16.3.1",
+    "eslint": "8.51.0",
+    "eslint-config-prettier": "9.0.0",
+    "eslint-config-react-app": "7.0.1",
+    "eslint-import-resolver-typescript": "3.6.1",
+    "eslint-plugin-import": "2.28.1",
+    "eslint-plugin-prettier": "5.0.1",
+    "eslint-plugin-react": "7.33.2",
+    "eslint-plugin-react-hooks": "4.6.0",
+    "prettier": "3.0.3",
+    "typescript": "5.2.2"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      "defaults"
+    ],
+    "development": [
+      "defaults"
+    ]
+  }
+}

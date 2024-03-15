@@ -1,0 +1,6 @@
+{
+    "program": "environment.aleo",
+    "version": "1.0.0",
+    "description": "This is a NFT enviroment for Aleo. Smart contract should mint an NFT or NFTs and send them to the user.",
+    "license": "MIT"
+}

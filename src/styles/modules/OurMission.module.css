@@ -1,0 +1,42 @@
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
+
+.row {
+    display: flex;
+}
+
+.our-mission .content {
+    padding: 2rem 0;
+}
+
+.our-mission .content h3 {
+    font-size: 2.3rem;
+    line-height: 2.7rem;
+}
+
+.our-mission .content p {
+    font-size: 1.2rem;
+}
+
+.our-mission .col-img,
+.our-mission .col-text {
+    flex: 1;
+}
+
+.our-mission .img-fluid {
+    max-width: 80%;
+    height: auto;
+}
+
+.our-mission .rounded-circle {
+    border-radius: 5%;
+    padding: 5px;
+    border: 1px solid #c3c3c3;
+}
+
+.align-items-center {
+    align-items: center;
+}

@@ -1,0 +1,64 @@
+.masthead {
+    position: relative;
+    overflow: hidden;
+    padding-top: calc(4rem + 72px);
+    padding-bottom: 8rem;
+    background: linear-gradient(0deg, #167332 0%, #004517 100%) no-repeat scroll center center;
+    background-size: cover;
+}
+
+.mastheadContent {
+    z-index: 1;
+    position: relative;
+    text-align: center;
+}
+
+.mastheadButton {
+    height: 55px;
+    padding: 0 40px;
+    text-align: center;
+    font-weight: 600;
+    letter-spacing: 0.2px;
+    font-size: 20px;
+    margin-top: 50px;
+}
+
+.backgroundCircle {
+    z-index: 0;
+    position: absolute;
+    border-radius: 100%;
+    background: linear-gradient(0deg, #167332 0%, #004517 100%);
+}
+
+.backgroundCircle1 {
+    height: 90rem;
+    width: 90rem;
+    bottom: -55rem;
+    left: -55rem;
+}
+
+.backgroundCircle2 {
+    height: 50rem;
+    width: 50rem;
+    top: -25rem;
+    right: -25rem;
+}
+
+.backgroundCircle3 {
+    height: 20rem;
+    width: 20rem;
+    bottom: -10rem;
+    right: 5%;
+}
+
+.mastheadHeading,
+.mastheadSubheading {
+    font-size: 5rem;
+    color: white;
+    margin: 0;
+    text-align: center;
+}
+
+.mastheadSubheading {
+    font-size: 1.5rem;
+}
