@@ -13,14 +13,9 @@ import {publicProvider} from 'wagmi/providers/public';
 
 import {TopMenu, MainContent} from "layout";
 
-import CreateCampaign from "./components/campaigns/partials/CreateCampaign";
-import Marketplace from "./components/Marketplace";
 import Profile from "./components/Profile";
-import SubmitCampaign from "./components/campaigns/partials/SubmitCampaign";
 
 import "styles/App.css";
-import Campaigns from "components/Campaigns";
-import Homepage from "./components/Homepage";
 import Footer from "./layout/Footer";
 
 const styles = {
@@ -32,7 +27,7 @@ const styles = {
     }
 } as const;
 
-const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECT_ID ?? "";
+const projectId = 'test'
 
 const { chains, publicClient } = configureChains(
     [mainnet, lineaTestnet, scrollSepolia, sepolia, goerli],
@@ -40,7 +35,7 @@ const { chains, publicClient } = configureChains(
 );
 
 const metadata = {
-    name: 'TODO',
+    name: 'CHAIN RUNNERZ',
     description: 'TODO',
     url: 'TODO',
     icons: ['TODO']
@@ -74,11 +69,6 @@ function App() {
                         <TopMenu />
                         <MainContent>
                             <Routes>
-                                <Route path="/" element={<Homepage />} />
-                                <Route path="/marketplace" element={<Marketplace />} />
-                                <Route path="/campaigns" element={<Campaigns />} />
-                                <Route path="/campaigns/create" element={<CreateCampaign />} />
-                                <Route path="/campaigns/submit" element={<SubmitCampaign />} />
                                 <Route path="/profile" element={<Profile />} />
                             </Routes>
                         </MainContent>

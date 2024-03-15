@@ -1,5 +1,5 @@
 import { FC } from "react";
-import { Button, Layout, Menu } from "antd";
+import { Button, Layout } from "antd";
 import { useWindowWidthAndHeight } from "hooks";
 import { Link } from "react-router-dom";
 import { useWeb3Modal } from '@web3modal/wagmi/react';
@@ -52,26 +52,11 @@ const TopMenu: FC = () => {
             <h2>
                 <div style={styles.logo}>
                     <h2 style={{ marginLeft: '10px' }}>
-                        <Link to="/" style={{ color: '#004517' }}>TODO</Link>
+                        <Link to="/" style={{ color: '#1f8d97' }}>CHAIN RUNNERZ</Link>
                     </h2>
                 </div>
             </h2>
             <div style={styles.headerRight}>
-                <Menu style={styles.headerRight}>
-                    <Menu.Item key="1" style={{ minWidth: '150px', textAlign: 'center' }}>
-                        <Link to="/marketplace">Marketplace</Link>
-                    </Menu.Item>
-                    {isConnected && (
-                        <Menu.Item key="2" style={{ minWidth: '150px', textAlign: 'center' }}>
-                            <Link to="/campaigns">My Campaigns</Link>
-                        </Menu.Item>
-                    )}
-                    {isConnected && (
-                        <Menu.Item key="3" style={{ minWidth: '150px', textAlign: 'center' }}>
-                            <Link to="/profile">My Profile</Link>
-                        </Menu.Item>
-                    )}
-                </Menu>
                 {!isConnected && (
                     <Button shape="round" type="primary" style={styles.button} onClick={() => open()}>
                         Connect Wallet

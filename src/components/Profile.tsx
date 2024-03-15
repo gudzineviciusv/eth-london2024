@@ -173,7 +173,7 @@ const Profile: React.FC = () => {
                 <Col span={8}>
                     <Card title="Profile"
                         extra={
-                            <Tag color={isConnected ? '#004517' : 'red'} style={styles.statusTag}>
+                            <Tag color={isConnected ? '#1f8d97' : 'red'} style={styles.statusTag}>
                                 {isConnected ? 'Connected' : 'Not Connected'}
                             </Tag>
                         }>

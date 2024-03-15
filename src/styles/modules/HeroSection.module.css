@@ -3,7 +3,7 @@
     overflow: hidden;
     padding-top: calc(4rem + 72px);
     padding-bottom: 8rem;
-    background: linear-gradient(0deg, #167332 0%, #004517 100%) no-repeat scroll center center;
+    background: linear-gradient(0deg, #167332 0%, #1f8d97 100%) no-repeat scroll center center;
     background-size: cover;
 }
 
@@ -27,7 +27,7 @@
     z-index: 0;
     position: absolute;
     border-radius: 100%;
-    background: linear-gradient(0deg, #167332 0%, #004517 100%);
+    background: linear-gradient(0deg, #167332 0%, #1f8d97 100%);
 }
 
 .backgroundCircle1 {
