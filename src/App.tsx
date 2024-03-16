@@ -2,8 +2,8 @@ import {Buffer} from "buffer";
 
 import {EIP6963Connector, walletConnectProvider} from "@web3modal/wagmi";
 import {createWeb3Modal} from '@web3modal/wagmi/react';
-import {Layout, ConfigProvider, theme, Button} from "antd";
-import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
+import {Layout, ConfigProvider, theme} from "antd";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {goerli, mainnet, scrollSepolia, sepolia, lineaTestnet} from "viem/chains";
 import {configureChains, createConfig, WagmiConfig} from "wagmi";
 import {CoinbaseWalletConnector} from 'wagmi/connectors/coinbaseWallet';
@@ -24,8 +24,23 @@ import CitySelect from "layout/CitySelect/CitySelect";
 
 const styles = {
     layout: {
+        height: "100vh",
         overflow: "auto",
         fontFamily: "Sora, sans-serif",
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#f5f5f5",
+    },
+    container: {
+        backgroundColor: "white",
+        display: "flex",
+        maxWidth: "600px",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        height: "100vh",
     },
     button: {
         margin: "0 10px",
@@ -71,6 +86,7 @@ function App() {
                     }}
                 >
                     <Layout style={styles.layout}>
+                        <div style={styles.container}>
                         <TopMenu />
                         <MainContent>
                             <Routes>
@@ -81,6 +97,7 @@ function App() {
                             </Routes>
                         </MainContent>
                         <Footer />
+                        </div>
                     </Layout>
                 </ConfigProvider>
             </WagmiConfig>
