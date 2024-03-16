@@ -23,6 +23,7 @@ import CitySelect from "layout/CitySelect/CitySelect";
 import HomePage from "layout/HomePage/HomePage";
 import CreateChalange from "layout/CreateChalange/CreateChalange";
 import CityChalange from "layout/CityChalange/CityChalange";
+import MissionScreen from "layout/MissionScreen/MissionScreen";
 
 const styles = {
     layout: {
@@ -99,6 +100,7 @@ function App() {
                                 <Route path="/join-challenge" element={<JoinChallenge />} />
                                 <Route path="/city-select" element={<CitySelect />} />
                                 <Route path="/city/:city" element={<CityChalange />} />
+                                <Route path="/mission/:mission" element={<MissionScreen apiKey='AIzaSyD_hLQKlHtGp2EnqC-_6qi9B2mv3N_LH0M' />} />
                             </Routes>
                         </MainContent>
                         <Footer />

@@ -51,7 +51,7 @@ const ChallengeItem: React.FC<ChallengeItemsProps> = ({ address, city, amount,du
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/challenge/${address}`);
+        navigate(`/mission/${address}`);
     };
 
     const getImageFromChain = () => {
