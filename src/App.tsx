@@ -21,6 +21,8 @@ import CreateChallenge from "./components/CreateChallenge";
 import "styles/App.css";
 import Footer from "./layout/Footer";
 import CitySelect from "layout/CitySelect/CitySelect";
+import CityChalange from "layout/CityChalange/CityChalange";
+import CreateChalange from "layout/CreateChalange/CreateChalange";
 
 const styles = {
     layout: {
@@ -31,10 +33,9 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "#f5f5f5",
+        backgroundColor: "black",
     },
     container: {
-        backgroundColor: "white",
         display: "flex",
         maxWidth: "600px",
         flexDirection: "column",
@@ -42,6 +43,7 @@ const styles = {
         alignItems: "center",
         height: "100vh",
         overflowX: "scroll",
+        backgroundColor: "#f5f5f5",
     },
     button: {
         margin: "0 10px",
@@ -94,8 +96,9 @@ function App() {
                                 <Route path="/profile" element={<Profile />} />
                                 <Route path="/create-challenge" element={<CreateChallenge />} />
                                 <Route path="/join-challenge" element={<JoinChallenge />} />
-                                <Route path="/city/:city" element={<CitySelect />} />
+                                <Route path="/city/:city" element={<CityChalange />} />
                                 <Route path="/city-select" element={<CitySelect />} />
+                                <Route path="/create-chalange/:city" element={<CreateChalange />} />
                             </Routes>
                         </MainContent>
                         <Footer />

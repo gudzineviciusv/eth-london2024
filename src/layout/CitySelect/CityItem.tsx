@@ -13,7 +13,7 @@ const CityItem: React.FC<CityItemsProps> = ({ image, name, isCommingSoon }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {
-        navigate(`/cities/${name.toLowerCase()}`); // Redirect to the city route
+        navigate(`/city/${name.toLowerCase()}`); // Redirect to the city route
     };
 
     const style = {

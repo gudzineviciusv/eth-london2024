@@ -1,6 +1,7 @@
 .cityContainer {
     display: flex;
     flex-direction: column;
+    margin-top: 100px;
 }
 
 .cityHeader {

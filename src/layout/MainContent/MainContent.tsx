@@ -9,7 +9,6 @@ type Style = {
 
 const styles = {
     content: {
-        marginTop: "50px",
         padding: "50px",
     } as Style,
     homepageContent: {
