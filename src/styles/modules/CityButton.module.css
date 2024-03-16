@@ -1,0 +1,23 @@
+.cityContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.cityHeader {
+    font-size: 40px;
+    font-weight: bold;
+}
+
+.cityItemContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: scroll;
+    gap: 20px;
+}
+
+.cityItem:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
