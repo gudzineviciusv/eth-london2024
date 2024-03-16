@@ -41,6 +41,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "center",
         height: "100vh",
+        overflowX: "scroll",
     },
     button: {
         margin: "0 10px",

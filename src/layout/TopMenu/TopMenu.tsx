@@ -10,6 +10,7 @@ const { Header } = Layout;
 const styles = {
     header: {
         position: "sticky",
+        top: 0,
         display: "flex",
         alignItems: "center",
         justifyContent: "space-between",
