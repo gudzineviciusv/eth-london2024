@@ -20,8 +20,9 @@ import JoinChallenge from "./components/JoinChallenge";
 import "styles/App.css";
 import Footer from "./layout/Footer";
 import CitySelect from "layout/CitySelect/CitySelect";
-import HomePage from "layout/ChallengeSelect/ChallengeSelect";
+import HomePage from "layout/HomePage/HomePage";
 import CreateChalange from "layout/CreateChalange/CreateChalange";
+import CityChalange from "layout/CityChalange/CityChalange";
 
 const styles = {
     layout: {
@@ -97,6 +98,7 @@ function App() {
                                 <Route path="/create-challenge" element={<CreateChalange />} />
                                 <Route path="/join-challenge" element={<JoinChallenge />} />
                                 <Route path="/city-select" element={<CitySelect />} />
+                                <Route path="/city/:city" element={<CityChalange />} />
                             </Routes>
                         </MainContent>
                         <Footer />

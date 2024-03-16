@@ -21,17 +21,6 @@
     background-color: #f0f0f0;
 }
 
-.challengeItem {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 200px;
-    height: 200px;
-    border-radius: 10px;
-    background-color: #ffffff;
-    margin-bottom: 10px;
-}
 
 .challengeItem:hover {
     cursor: pointer;
@@ -140,4 +129,5 @@
     background-color: #01B574;
     margin-bottom: 20px;
 }
+
 

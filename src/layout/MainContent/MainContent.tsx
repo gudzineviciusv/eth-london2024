@@ -1,17 +1,11 @@
 import { FC } from 'react';
-import { useLocation } from 'react-router-dom';
 import { useWindowWidthAndHeight } from "../../hooks";
-
-type Style = {
-    marginTop: string,
-    padding?: string,
-}
 
 const styles = {
     content: {
-        marginTop: "50px",
         padding: "16px",
-    } as Style,
+        overflow: "scroll"
+    } as const,
     homepageContent: {
         marginTop: "50px",
     },
@@ -31,12 +25,8 @@ interface MainContentProps {
 
 const MainContent: FC<MainContentProps> = ({children}) => {
     const { isMobile } = useWindowWidthAndHeight();
-    const location = useLocation();
 
     let style = styles.content;
-    if (location.pathname === '/') {
-        style = styles.homepageContent;
-    }
 
     return (
         <div style={isMobile ? styles.contentMobile : style}>
