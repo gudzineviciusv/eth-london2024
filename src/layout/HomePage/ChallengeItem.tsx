@@ -47,7 +47,7 @@ const styles1 = {
 }
 
 
-const ChallengeItem: React.FC<ChallengeItemsProps> = ({ address, city, amount,duration, chain }) => {
+const ChallengeItem: React.FC<ChallengeItemsProps> = ({ address, city, amount, duration, chain }) => {
     const navigate = useNavigate();
 
     const handleClick = () => {

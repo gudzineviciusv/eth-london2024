@@ -1,112 +1,56 @@
-import { FC, useEffect } from 'react';
-
+import { FC, useState, useEffect } from 'react';
 import styles from '../../styles/modules/CityButton.module.css';
 import { useParams } from 'react-router-dom';
 import ChallengeItem, { ChallengeItemsProps } from 'layout/HomePage/ChallengeItem';
 
-const mockData: ChallengeItemsProps[] = [
-    {
-        address: '0x0',
-        city: 'New York',
-        amount: 100,
-        duration: 30,
-        chain: 'Arbitrum'
-    },
-    {
-        address: '0x1',
-        city: 'London',
-        amount: 100,
-        duration: 30,
-        chain: 'Chiliz'
-    },
-    {
-        address: '0x2',
-        city: 'Paris',
-        amount: 100,
-        duration: 30,
-        chain: 'Celo'
-    },
-    {
-        address: '0x3',
-        city: 'Berlin',
-        amount: 100,
-        duration: 30,
-        chain: 'Ethereum'
-    },
-    {
-        address: '0x4',
-        city: 'Tokyo',
-        amount: 100,
-        duration: 30,
-        chain: 'Polygon'
-    },
-    {
-        address: '0x5',
-        city: 'Moscow',
-        amount: 100,
-        duration: 30,
-        chain: 'Binance'
-    },
-    {
-        address: '0x6',
-        city: 'Madrid',
-        amount: 100,
-        duration: 30,
-        chain: 'Solana'
-    },
-    {
-        address: '0x7',
-        city: 'Rome',
-        amount: 100,
-        duration: 30,
-        chain: 'Tezos'
-    },
-    {
-        address: '0x8',
-        city: 'Vienna',
-        amount: 100,
-        duration: 30,
-        chain: 'Tron'
-    },
-    {
-        address: '0x9',
-        city: 'Athens',
-        amount: 100,
-        duration: 30,
-        chain: 'Avalanche'
-    },
-    {
-        address: '0x14',
-        city: 'Dublin',
-        amount: 100,
-        duration: 30,
-        chain: 'Filecoin'
-    },
-    {
-        address: '0x15',
-        city: 'Lisbon',
-        amount: 100,
-        duration: 30,
-        chain: 'Near'
-    },];
+export interface Challenge {
+    creator_wallet: string;
+    opponent_wallet: string;
+    target_geolocation: string;
+    creation_date: string;
+    network: string;
+    crypto_currency: string;
+    time_to_target: number;
+    is_public: boolean;
+}
 
 
 const CityChalange: FC = () => {
-
-    const { city } = useParams()
+    const { city } = useParams();
+    const [challenges, setChallenges] = useState<ChallengeItemsProps[]>([]);
 
     useEffect(() => {
-        console.log(city)
+        const fetchData = async () => {
+            try {
+                const response = await fetch(`https://mikasguu.pythonanywhere.com/challenges`);
+                if (!response.ok) {
+                    throw new Error('Failed to fetch challenges');
+                }
+                const data = await response.json();
+                const transformedChallenges = data.map((challenge: Challenge) => ({
+                    address: challenge.creator_wallet,
+                    city: 'London',
+                    amount: challenge.crypto_currency,
+                    duration: challenge.time_to_target,
+                    chain: challenge.network,
+                }));
+                setChallenges(transformedChallenges);
+            } catch (error) {
+                console.error('Error fetching challenges:', error);
+            }
+        };
+
+        fetchData();
     }, [city]);
 
- 
     return (
         <div className={styles.cityContainer}>
             <div>
-              Challanges
+                Challenges in {city}
             </div>
             <div className={styles.cityItemContainer}>
-                {mockData.map((challenge, index) => (
+                {challenges.map((challenge, index) => (
+                    console.log(challenge),
                     <ChallengeItem key={index} {...challenge} />
                 ))}
             </div>

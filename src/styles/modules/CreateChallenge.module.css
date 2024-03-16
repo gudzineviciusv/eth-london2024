@@ -1,0 +1,18 @@
+.createHeader {
+    font-size: 34px;
+    font-weight: bold;
+}
+
+.createContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: scroll;
+    gap: 20px;
+}
+
+.createItem:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}

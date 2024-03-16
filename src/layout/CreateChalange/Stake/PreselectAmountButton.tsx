@@ -10,10 +10,9 @@ const styles = {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
-        width: '55px',
+        width: '75px',
         height: '55px',
-        color: 'white',
-        background: 'grey',
+        background: 'white',
         fontSize: '22px',
         cursor: 'pointer',
         borderRadius: '12px',
@@ -23,7 +22,7 @@ const styles = {
 const PreselectAmountButton: React.FC<PreselectAmountButtonProps> = ({ amount, onClick }) => {
     return (
         <div onClick={() => onClick(amount)} style={styles.container}>
-            {amount}
+            ${amount}
         </div>
     );
 }

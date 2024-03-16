@@ -16,16 +16,13 @@ const StakeForm: React.FC = () => {
 
     return (
         <div style={styles.container}>
-            <div>Stake</div>
-            <div style={styles.container}>
-                <CurrencyPicker />
-                <AmountSelect amount={amount} setAmount={setAmount}/>
-                <div style={{ display: 'flex', gap: 10, justifyContent: 'space-between' }}>
-                    <PreselectAmountButton amount={1} onClick={setAmount} />
-                    <PreselectAmountButton amount={10} onClick={setAmount} />
-                    <PreselectAmountButton amount={20} onClick={setAmount} />
-                    <PreselectAmountButton amount={50} onClick={setAmount} />
-                </div>
+            <CurrencyPicker />
+            <AmountSelect amount={amount} setAmount={setAmount}/>
+            <div style={{ display: 'flex', gap: 10, justifyContent: 'space-between' }}>
+                <PreselectAmountButton amount={1} onClick={setAmount} />
+                <PreselectAmountButton amount={10} onClick={setAmount} />
+                <PreselectAmountButton amount={20} onClick={setAmount} />
+                <PreselectAmountButton amount={50} onClick={setAmount} />
             </div>
         </div>
     );

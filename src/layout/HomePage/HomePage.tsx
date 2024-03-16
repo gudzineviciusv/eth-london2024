@@ -49,7 +49,7 @@ const HomePage: FC = () => {
                     <ChallengeItem key={index} {...challenge} />
                 ))}
             </div>
-            <div className={styles.createChallengeButton}>+ Create a challenge</div>
+            <div className={styles.createChallengeButton} onClick={() => navigate('/create-challenge')}>Create a challenge</div>
             <div className={styles.howDoesItWorkHeader}>How does it work?</div>
             <div className={styles.howDoesItWorkItem}>
                 <div className={styles.howDoesItWorkContainer}>
