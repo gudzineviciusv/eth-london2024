@@ -52,7 +52,7 @@ const TopMenu: FC = () => {
             <h2>
                 <div style={styles.logo}>
                     <h2 style={{ marginLeft: '10px' }}>
-                        <Link to="/" style={{ color: '#1f8d97' }}>CHAIN RUNNERZ</Link>
+                        <Link to="/" style={{ color: '#1f8d97' }}>Geo Dash</Link>
                     </h2>
                 </div>
             </h2>
@@ -65,11 +65,6 @@ const TopMenu: FC = () => {
                 {isConnected && (
                     <Button shape="round" type="default" style={styles.button} onClick={() => open({ view: 'Account' })}>
                         Wallet Connected
-                    </Button>
-                )}
-                {isConnected && (
-                    <Button shape="round" type="primary" style={styles.button}>
-                        <Link to="/campaigns/create">Create Campaign</Link>
                     </Button>
                 )}
             </div>

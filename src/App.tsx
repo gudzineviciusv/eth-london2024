@@ -2,8 +2,8 @@ import {Buffer} from "buffer";
 
 import {EIP6963Connector, walletConnectProvider} from "@web3modal/wagmi";
 import {createWeb3Modal} from '@web3modal/wagmi/react';
-import {Layout, ConfigProvider, theme, Button} from "antd";
-import {BrowserRouter as Router, Route, Routes, Link} from "react-router-dom";
+import {Layout, ConfigProvider, theme} from "antd";
+import {BrowserRouter as Router, Route, Routes} from "react-router-dom";
 import {goerli, mainnet, scrollSepolia, sepolia, lineaTestnet} from "viem/chains";
 import {configureChains, createConfig, WagmiConfig} from "wagmi";
 import {CoinbaseWalletConnector} from 'wagmi/connectors/coinbaseWallet';
@@ -15,8 +15,6 @@ import {publicProvider} from 'wagmi/providers/public';
 import {TopMenu, MainContent} from "layout";
 
 import Profile from "./components/Profile";
-import JoinChallenge from "./components/JoinChallenge"; 
-import CreateChallenge from "./components/CreateChallenge";
 
 import "styles/App.css";
 import Footer from "./layout/Footer";
@@ -33,7 +31,7 @@ const styles = {
     }
 } as const;
 
-const projectId = 'test'
+const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECT_ID || "";
 
 const { chains, publicClient } = configureChains(
     [mainnet, lineaTestnet, scrollSepolia, sepolia, goerli],
@@ -74,18 +72,8 @@ function App() {
                     <Layout style={styles.layout}>
                         <TopMenu />
                         <MainContent>
-                            <div style={{ textAlign: 'center', marginTop: '50px' }}>
-                                <Link to="/create-challenge">
-                                    <Button type="primary" style={styles.button}>Create Challenge</Button>
-                                </Link>
-                                <Link to="/join-challenge">
-                                    <Button type="primary" style={styles.button}>Join Challenge</Button>
-                                </Link>
-                            </div>
                             <Routes>
                                 <Route path="/profile" element={<Profile />} />
-                                <Route path="/create-challenge" element={<CreateChallenge />} />
-                                <Route path="/join-challenge" element={<JoinChallenge />} />
                             </Routes>
                         </MainContent>
                         <Footer />

@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { useLocation } from 'react-router-dom';
-import {useWindowWidthAndHeight} from "../../hooks";
+import { useWindowWidthAndHeight } from "../../hooks";
 
 type Style = {
     marginTop: string,
