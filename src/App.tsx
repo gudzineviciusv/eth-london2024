@@ -95,6 +95,7 @@ function App() {
                                 <Route path="/create-challenge" element={<CreateChallenge />} />
                                 <Route path="/join-challenge" element={<JoinChallenge />} />
                                 <Route path="/city/:city" element={<CitySelect />} />
+                                <Route path="/city-select" element={<CitySelect />} />
                             </Routes>
                         </MainContent>
                         <Footer />

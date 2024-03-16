@@ -1,4 +1,7 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
+
+import styles1 from '../../styles/modules/CityButton.module.css';
 
 interface CityItemsProps {
     image: string;
@@ -7,6 +10,12 @@ interface CityItemsProps {
 }
 
 const CityItem: React.FC<CityItemsProps> = ({ image, name, isCommingSoon }) => {
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate(`/cities/${name.toLowerCase()}`); // Redirect to the city route
+    };
+
     const style = {
         backgroundImage: `url(${image})`,
         backgroundSize: 'cover',
@@ -24,7 +33,7 @@ const CityItem: React.FC<CityItemsProps> = ({ image, name, isCommingSoon }) => {
     };
 
     return (
-        <div style={style}>
+        <div style={style} className={styles1.cityItem} onClick={handleClick}>
             {name} {isCommingSoon && ' - Coming Soon'}
         </div>
     );

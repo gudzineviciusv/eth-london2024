@@ -1,24 +1,7 @@
 import { FC } from 'react';
 import CityItem from './CityItem';
 
-const styles = {
-    container: {
-        display: "flex",
-        flexDirection: "column",
-    },
-    header: {
-       fontSize: "40px",
-         fontWeight: "bold",    
-    },
-    cityContainer: {
-        display: "flex",
-        flexDirection: "column",
-        flexWrap: "wrap",
-        justifyContent: "space-between",
-        overflow: "scroll",
-        gap: "20px",
-    },
-} as const;
+import styles from '../../styles/modules/CityButton.module.css';
 
 const mockData = [
     {
@@ -41,9 +24,9 @@ const mockData = [
 const CitySelect: FC = () => {
  
     return (
-        <div style={styles.container}>
-            <div style={styles.header}>Choose a city</div>
-            <div style={styles.cityContainer}>
+        <div className={styles.cityContainer}>
+            <div className={styles.cityHeader}>Choose a city</div>
+            <div className={styles.cityItemContainer}>
                 {mockData.map((city, index) => (
                     <CityItem key={index} image={city.image} name={city.name} isCommingSoon={city.isCommingSoon} />
                 ))}
