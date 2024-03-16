@@ -21,8 +21,7 @@ import CreateChallenge from "./components/CreateChallenge";
 import "styles/App.css";
 import Footer from "./layout/Footer";
 import CitySelect from "layout/CitySelect/CitySelect";
-import CityChalange from "layout/CityChalange/CityChalange";
-import CreateChalange from "layout/CreateChalange/CreateChalange";
+import ChallengeSelect from "layout/ChallengeSelect/ChallengeSelect";
 
 const styles = {
     layout: {
@@ -33,11 +32,11 @@ const styles = {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
-        backgroundColor: "black",
+        backgroundColor: "#E9E9E9",
     },
     container: {
         display: "flex",
-        maxWidth: "600px",
+        maxWidth: "400px",
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
@@ -94,11 +93,10 @@ function App() {
                         <MainContent>
                             <Routes>
                                 <Route path="/profile" element={<Profile />} />
+                                <Route path="/home" element={<ChallengeSelect />} />
                                 <Route path="/create-challenge" element={<CreateChallenge />} />
                                 <Route path="/join-challenge" element={<JoinChallenge />} />
-                                <Route path="/city/:city" element={<CityChalange />} />
                                 <Route path="/city-select" element={<CitySelect />} />
-                                <Route path="/create-chalange/:city" element={<CreateChalange />} />
                             </Routes>
                         </MainContent>
                         <Footer />

@@ -53,7 +53,7 @@ const TopMenu: FC = () => {
             <h2>
                 <div style={styles.logo}>
                     <h2 style={{ marginLeft: '10px' }}>
-                        <Link to="/" style={{ color: '#1f8d97' }}>Geo Dash</Link>
+                        <Link to="/" style={{ color: '#01B574' }}>Geo Dash</Link>
                     </h2>
                 </div>
             </h2>

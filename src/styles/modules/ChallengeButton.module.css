@@ -1,0 +1,142 @@
+.challengeContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.challengeHeader {
+    font-size: 34px;
+    font-weight: bold;
+    padding-top: 600px;
+    text-align: left;
+}
+
+.challengeItemContainer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    overflow: scroll;
+    gap: 20px;
+    background-color: #f0f0f0;
+}
+
+.challengeItem {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+}
+
+.challengeItem:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.createChallengeButton {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    height: 50px;
+    background-color: #01B574;
+    margin-bottom: 10px;
+}
+
+.createChallengeButton:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+.challengesSeeAll {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 15px;
+}
+
+.challengesText {
+    font-size: 20px;
+}
+
+.seeAllLink {
+    font-size: 20px;
+    color: #01B574;
+    text-decoration: none;
+}
+
+.howDoesItWorkHeader {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.howDoesItWorkStepnumberTopLeftButton {
+    position: absolute;
+    top: 10px; 
+    left: 10px;
+    width: 80px; 
+    height: 40px;
+    border-radius: 20px;
+    background-color: #01B574;
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: bold;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.howDoesItWorkContainer {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    height: 150px;
+    border-radius: 10px;
+    background-color: #ffffff;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+
+.howDoesItWorkItemText {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
+.howDoesItWorkGreenSubtext {
+    font-size: 15px;
+    color: #01B574;
+}
+
+.nextStepArrow {
+    margin: 0 50%;
+}
+
+.ourTeamContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.ourTeamHeader {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.greenLineBreak {
+    width: 100%;
+    height: 2px;
+    background-color: #01B574;
+    margin-bottom: 20px;
+}
+

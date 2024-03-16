@@ -9,7 +9,8 @@ type Style = {
 
 const styles = {
     content: {
-        padding: "50px",
+        marginTop: "50px",
+        padding: "16px",
     } as Style,
     homepageContent: {
         marginTop: "50px",
@@ -19,7 +20,7 @@ const styles = {
         justifyContent: "center",
         alignItems: "flex-start",
         marginTop: "100px",
-        padding: "30px 0",
+        padding: "10px 0",
         overflow: "hidden"
     }
 } as const;
