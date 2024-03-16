@@ -33,7 +33,6 @@ const styles = {
 } as const;
 
 const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECT_ID || "";
-const projectId = process.env.REACT_APP_WALLETCONNECT_PROJECT_ID || '';
 
 const { chains, publicClient } = configureChains(
     [mainnet, lineaTestnet, scrollSepolia, sepolia, goerli],
