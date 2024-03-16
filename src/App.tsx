@@ -16,12 +16,12 @@ import {TopMenu, MainContent} from "layout";
 
 import Profile from "./components/Profile";
 import JoinChallenge from "./components/JoinChallenge"; 
-import CreateChallenge from "./components/CreateChallenge";
 
 import "styles/App.css";
 import Footer from "./layout/Footer";
 import CitySelect from "layout/CitySelect/CitySelect";
-import ChallengeSelect from "layout/ChallengeSelect/ChallengeSelect";
+import HomePage from "layout/ChallengeSelect/ChallengeSelect";
+import CreateChalange from "layout/CreateChalange/CreateChalange";
 
 const styles = {
     layout: {
@@ -93,8 +93,8 @@ function App() {
                         <MainContent>
                             <Routes>
                                 <Route path="/profile" element={<Profile />} />
-                                <Route path="/home" element={<ChallengeSelect />} />
-                                <Route path="/create-challenge" element={<CreateChallenge />} />
+                                <Route path="/" element={<HomePage />} />
+                                <Route path="/create-challenge" element={<CreateChalange />} />
                                 <Route path="/join-challenge" element={<JoinChallenge />} />
                                 <Route path="/city-select" element={<CitySelect />} />
                             </Routes>

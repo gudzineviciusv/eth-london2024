@@ -16,6 +16,7 @@
     justify-content: space-between;
     overflow: scroll;
     gap: 20px;
+    padding: 20px;
 }
 
 .cityItem:hover {

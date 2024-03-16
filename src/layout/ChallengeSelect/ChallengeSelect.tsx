@@ -18,7 +18,7 @@ const mockData = [
     },
 ];
 
-const challengeSelect: FC = () => {
+const HomePage: FC = () => {
  
     return (
         <div className={styles.challengeContainer}>
@@ -71,4 +71,4 @@ const challengeSelect: FC = () => {
     );
 };
 
-export default challengeSelect;
+export default HomePage;
