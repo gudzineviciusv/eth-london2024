@@ -5,6 +5,8 @@ import styles from '../../styles/modules/ChallengeButton.module.css';
 import SeeAllButton from './SeeAllButton';
 import { useNavigate } from 'react-router-dom';
 
+import teamImage from '../../assets/images/team.png';
+
 const mockData: ChallengeItemsProps[] = [
     {
         address: '0x0',
@@ -28,6 +30,12 @@ const mockData: ChallengeItemsProps[] = [
         chain: 'Celo'
     }
 
+];
+
+const teamMembers = [
+    { name: 'Vytautas Gudzinevičius', role: 'Developer' },
+    { name: 'Mikas Gudzinevičius', role: 'Developer' },
+    { name: 'Domas Ambrazevičius', role: 'Designer' }
 ];
 
 const HomePage: FC = () => {
@@ -81,7 +89,15 @@ const HomePage: FC = () => {
             <div className={styles.greenLineBreak}></div>
             <div className={styles.ourTeamContainer}>
             <div className={styles.ourTeamHeader}>Our Team</div>
-            <div className={styles.ourTeamImage}/><img src="https://raw.githubusercontent.com/gudzineviciusv/eth-london2024/96f271b9c0394b37abdbcc86153d7451c2831477/src/assets/images/team.png"/>
+            <img src={teamImage} alt="Our Team" className={styles.ourTeamImage} />
+            <div className={styles.ourTeamMembers}>
+                    {teamMembers.map((member, index) => (
+                        <div key={index} className={styles.ourTeamMember}>
+                            <div>{member.name}</div>
+                            <div className={styles.smallPrint}>{member.role}</div>
+                        </div>
+                    ))}
+                </div>       
             </div>
         </div>
     );
