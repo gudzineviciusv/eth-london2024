@@ -6,6 +6,10 @@ import SeeAllButton from './SeeAllButton';
 import { useNavigate } from 'react-router-dom';
 
 import teamImage from '../../assets/images/team.png';
+import cloverImage from '../../assets/images/clover.png';
+import mapImage from '../../assets/images/map.png';
+import twentyimage from '../../assets/images/twenty.png';
+import pathImage from '../../assets/images/path.png';
 
 const mockData: ChallengeItemsProps[] = [
     {
@@ -57,34 +61,53 @@ const HomePage: FC = () => {
                     <ChallengeItem key={index} {...challenge} />
                 ))}
             </div>
-            <div className={styles.createChallengeButton} onClick={() => navigate('/create-challenge')}>Create a challenge</div>
+            <div className={styles.createChallengeButton} onClick={() => navigate('/create-challenge')}>+ Create a challenge</div>
             <div className={styles.howDoesItWorkHeader}>How does it work?</div>
             <div className={styles.howDoesItWorkItem}>
                 <div className={styles.howDoesItWorkContainer}>
-                    <div className={styles.howDoesItWorkStepnumberTopLeftButton}>Step 1</div>
-                    <div className={styles.howDoesItWorkItemText}>Create a challenge</div>
-                    <div className={styles.howDoesItWorkGreenSubtext}>or select from available ones</div>
-                </div>
+                <div className={styles.howDoesItWorkStepnumberTopLeftButton}>Step 1</div>
+                <div className={styles.howDoesItWorkItemText}>Create challenge for racing in your area</div>
+                <div className={styles.howDoesItWorkGreenSubtext}>or select from available ones</div>
+                <img src={mapImage} alt="Clover" className={styles.cloverImage} />
                 <div className={styles.nextStepArrow}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="3" height="30" viewBox="0 0 3 30" fill="none">
                 <path d="M1.5 0V30" stroke="#01B574" stroke-width="2"/>
                 </svg>
                 </div>
-                <div className={styles.howDoesItWorkContainer}>
-                    <div className={styles.howDoesItWorkStepnumberTopLeftButton}>Step 1</div>
-                    <div className={styles.howDoesItWorkItemText}>Create a challenge</div>
-                    <div className={styles.howDoesItWorkGreenSubtext}>or select from available ones</div>
                 </div>
+
+                <div className={styles.howDoesItWorkContainer}>
+                <div className={styles.howDoesItWorkStepnumberTopLeftButton}>Step 2</div>
+                <div className={styles.howDoesItWorkItemText}>Stake selected currency and amount for reward</div>
+                <div className={styles.howDoesItWorkGreenSubtext}>and find a friend to compete with</div>
+                <img src={twentyimage} alt="Clover" className={styles.cloverImage} />
                 <div className={styles.nextStepArrow}>
                 <svg xmlns="http://www.w3.org/2000/svg" width="3" height="30" viewBox="0 0 3 30" fill="none">
                 <path d="M1.5 0V30" stroke="#01B574" stroke-width="2"/>
                 </svg>
                 </div>
-                <div className={styles.howDoesItWorkContainer}>
-                    <div className={styles.howDoesItWorkStepnumberTopLeftButton}>Step 1</div>
-                    <div className={styles.howDoesItWorkItemText}>Create a challenge</div>
-                    <div className={styles.howDoesItWorkGreenSubtext}>or select from available ones</div>
                 </div>
+
+                <div className={styles.howDoesItWorkContainer}>
+                <div className={styles.howDoesItWorkStepnumberTopLeftButton}>Step 3</div>
+                <div className={styles.howDoesItWorkItemText}>Get random coordinates of the destination</div>
+                <div className={styles.howDoesItWorkGreenSubtext}>and start the race!</div>
+                <img src={pathImage} alt="Clover" className={styles.cloverImage} />
+                <div className={styles.nextStepArrow}>
+                <svg xmlns="http://www.w3.org/2000/svg" width="3" height="30" viewBox="0 0 3 30" fill="none">
+                <path d="M1.5 0V30" stroke="#01B574" stroke-width="2"/>
+                </svg>
+                </div>
+                </div>
+
+                <div className={styles.howDoesItWorkContainer}>
+                <div className={styles.howDoesItWorkStepnumberTopLeftButton}>Step 4</div>
+                <div className={styles.howDoesItWorkItemText}>Win friend’s stake if you reach the destination first!</div>
+                <img src={cloverImage} alt="Clover" className={styles.cloverImage} />
+                </div>
+                <div className={styles.nextStepArrow}>
+                </div>
+
             </div>
             <div className={styles.greenLineBreak}></div>
             <div className={styles.ourTeamContainer}>
