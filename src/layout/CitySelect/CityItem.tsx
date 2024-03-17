@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import styles1 from '../../styles/modules/CityButton.module.css';
+import useUniqueCollectionNFT from 'hooks/useNFTMinter';
 
 interface CityItemsProps {
     image: string;
@@ -11,10 +12,32 @@ interface CityItemsProps {
 
 const CityItem: React.FC<CityItemsProps> = ({ image, name, isCommingSoon }) => {
     const navigate = useNavigate();
+    const [minting, setMinting] = useState(false);
 
-    const handleClick = () => {
-        navigate(`/city/${name.toLowerCase()}`); // Redirect to the city route
+    const { mintUniqueToken } =  useUniqueCollectionNFT();
+
+    const handleMint = async () => {
+
+     try {
+            setMinting(true);
+
+                await mintUniqueToken();
+
+                navigate(`/city/${name.toLowerCase()}`); // Redirect to the city route
+                setMinting(false);
+
+        } catch (error: any) {
+            setMinting(false);
+        }
+
+        setMinting(false);
     };
+
+    const handleClick = async () => {
+        handleMint();
+    };
+  
+
 
     const style = {
         backgroundImage: `url(${image})`,
@@ -34,7 +57,8 @@ const CityItem: React.FC<CityItemsProps> = ({ image, name, isCommingSoon }) => {
 
     return (
         <div style={style} className={styles1.cityItem} onClick={handleClick}>
-            {name} {isCommingSoon && ' - Coming Soon'}
+            {! minting && name} {isCommingSoon && ' - Coming Soon'}
+            {minting && <div>Minting... Please confirm transaction in your wallet!</div>}
         </div>
     );
 }

@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { GoogleMap, Circle, useJsApiLoader } from '@react-google-maps/api';
+import { GoogleMap, Circle } from '@react-google-maps/api';
 import { JSX } from 'react/jsx-runtime';
 import ReactSlider from 'react-slider';
 
 import '../../../styles/modules/Slider.module.css'; // Import the custom CSS
-
-
-interface Props {
-    apiKey: string;
-}
+import useGoogleMaps from 'hooks/useGoogleMaps';
 
 const containerStyle = {
   width: '100%',
@@ -32,14 +28,11 @@ const radiusItemStyle = {
 
 };
 
-const DestinationPicker: React.FC<Props> = ({ apiKey }) => {
-  const { isLoaded } = useJsApiLoader({
-    id: 'google-map-script',
-    googleMapsApiKey: apiKey,
-  });
+const DestinationPicker: React.FC = () => {
 
   const [center, setCenter] = useState({ lat: -34.397, lng: 150.644 }); // Default location
   const [radius, setRadius] = useState([500, 1000]); // Radii for circles
+  const { isLoaded } = useGoogleMaps()
 
   useEffect(() => {
     // Function to get the current location of the device

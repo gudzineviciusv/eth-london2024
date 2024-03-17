@@ -2,6 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
 import styles from '../../styles/modules/ChallengeButton.module.css';
+import useStakingContract from 'hooks/useStakingContract';
 
 export interface ChallengeItemsProps {
     address: string;
@@ -49,8 +50,11 @@ const styles1 = {
 
 const ChallengeItem: React.FC<ChallengeItemsProps> = ({ address, city, amount, duration, chain }) => {
     const navigate = useNavigate();
+    const { stake } = useStakingContract();
 
-    const handleClick = () => {
+
+    const handleClick = async () => {
+       await  stake('0x9D7990cC034173c69a26cA7098B6DaFA3313bD36', 0.00005);
         navigate(`/mission/${address}`);
     };
 

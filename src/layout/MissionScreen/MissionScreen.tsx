@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from 'react';
-import { GoogleMap, Marker, useJsApiLoader, DirectionsRenderer } from '@react-google-maps/api';
+import { GoogleMap, Marker, DirectionsRenderer } from '@react-google-maps/api';
 import GoToNavigationButton from './GoToNavigationButton';
 import MissionProgressModal from './MissionProgressModal';
-
-interface Props {
-    apiKey: string;
-}
+import useGoogleMaps from 'hooks/useGoogleMaps';
 
 const containerStyle = {
   width: '100vw',
@@ -24,10 +21,8 @@ const generateRandomPoints = (center: { lat: any; lng: any; }, radius: number, c
     return points;
   };
 
-const MyLocationMap: React.FC<Props> = ({ apiKey }) => {
-    const { isLoaded, loadError } = useJsApiLoader({
-        googleMapsApiKey: apiKey
-      });
+const MyLocationMap: React.FC = () => {
+      const { isLoaded, loadError } = useGoogleMaps();
     
       const [myLocation, setMyLocation] = useState<{ lat: any; lng: any;} | null>(null);
       const [randomLocations, setRandomLocations] = useState<{ lat: any; lng: any;}[]>([]);

@@ -17,7 +17,7 @@ const CreateChalange: FC = () => {
             <div className={styles.createHeader}>{challenge}</div>
             <div className={styles.createContainer}>
                 <StakeForm />
-                <DestinationPicker apiKey='AIzaSyD_hLQKlHtGp2EnqC-_6qi9B2mv3N_LH0M'/>
+                <DestinationPicker />
                 {/* <OtherOptions /> */}
                 <FinishButton />
             </div>

@@ -46,7 +46,7 @@ const CityChalange: FC = () => {
     return (
         <div className={styles.cityContainer}>
             <div>
-                Challenges in {city}
+                Challenges in the city
             </div>
             <div className={styles.cityItemContainer}>
                 {challenges.map((challenge, index) => (

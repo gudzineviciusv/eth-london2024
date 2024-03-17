@@ -100,7 +100,7 @@ function App() {
                                 <Route path="/join-challenge" element={<JoinChallenge />} />
                                 <Route path="/city-select" element={<CitySelect />} />
                                 <Route path="/city/:city" element={<CityChalange />} />
-                                <Route path="/mission/:mission" element={<MissionScreen apiKey='AIzaSyD_hLQKlHtGp2EnqC-_6qi9B2mv3N_LH0M' />} />
+                                <Route path="/mission/:mission" element={<MissionScreen />} />
                             </Routes>
                         </MainContent>
                         <Footer />
