@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 
 const styles = {
@@ -17,7 +18,10 @@ const styles = {
     } as React.CSSProperties,
 }
 
+
 const FinishButton: React.FC = () => {
+    const navigate = useNavigate();
+
     const handleClick = () => {
         // Hardcoded data
         const data = {
@@ -45,6 +49,10 @@ const FinishButton: React.FC = () => {
         })
         .then(data => {
             console.log('Challenge created successfully:', data);
+        })
+        .then(data => {
+            console.log('Challenge created successfully:', data);
+            navigate('/city/london');
         })
         .catch(error => {
             console.error('Error creating challenge:', error);
