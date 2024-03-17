@@ -4,6 +4,7 @@ import { useWindowWidthAndHeight } from "hooks";
 import { Link } from "react-router-dom";
 import { useWeb3Modal } from '@web3modal/wagmi/react';
 import { useAccount } from "wagmi";
+import userImage from "assets/images/icons/5.png";
 
 const { Header } = Layout;
 
@@ -32,15 +33,19 @@ const styles = {
         alignItems: 'center',
     },
     button: {
-        height: "40px",
+        position: "relative",
+        alignItems: "center",
         padding: "0 20px",
-        textAlign: "center",
-        fontWeight: "600",
-        letterSpacing: "0.2px",
-        fontSize: "15px",
-        marginLeft: "10px",
-        border: "none",
     },
+    image: {
+        width: "40px",
+        height: "40px",
+        borderRadius: "50%",
+        position: "relative",
+        top: "12px",
+        left: "15px",
+    },
+    
 } as const;
 
 const TopMenu: FC = () => {
@@ -71,9 +76,9 @@ const TopMenu: FC = () => {
                     </Button>
                 )}
                 {isConnected && (
-                    <Button shape="round" type="default" style={styles.button} onClick={() => open({ view: 'Account' })}>
-                        Wallet Connected
-                    </Button>
+                    <Link to="" type="default" style={styles.button} onClick={() => open({ view: 'Account' })}>
+                        <img src={userImage} alt="user" style={styles.image} />
+                    </Link>
                 )}
             </div>
         </Header>
