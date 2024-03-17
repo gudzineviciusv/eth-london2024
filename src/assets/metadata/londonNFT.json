@@ -1,0 +1,23 @@
+{
+    "name": "London City Access badge",
+    "description": "This NFT allows you to access London City in Geo Dash game.",
+    "image": "https://fuchsia-forward-spoonbill-510.mypinata.cloud/ipfs/QmbBKhkrB7kPVQybUMXkoFkcHvvCVnHsdkjRHpBN4pqez8",
+    "attributes": [
+    {
+    "trait_type": "Badge Type",
+    "value": "Digital"
+    },
+    {
+    "trait_type": "Issuer",
+    "value": "Geo Dash"
+    },
+    {
+    },
+    {
+    "trait_type": "Required Actions",
+    "value": "Access London City in Geo Dash game"
+    },
+    {
+    }
+    ]
+    }
