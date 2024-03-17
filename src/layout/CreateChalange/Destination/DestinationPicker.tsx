@@ -11,8 +11,9 @@ interface Props {
 }
 
 const containerStyle = {
-  width: '400px',
-  height: '400px',
+  width: '100%',
+  height: '300px',
+  padding: '20px',
 };
 
 const radiusContainerStyle = {

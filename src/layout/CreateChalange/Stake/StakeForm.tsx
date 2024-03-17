@@ -6,6 +6,7 @@ import PreselectAmountButton from './PreselectAmountButton';
 const styles = {
     container: {
         display: 'flex',
+        padding: '20px',
         flexDirection: 'column',
         gap: '10px',
     },

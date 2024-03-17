@@ -3,9 +3,8 @@ import React from 'react';
 
 const styles = {
     container: {
-        padding: '10px',
+        padding: '20px',
         display: 'flex',
-        width: '100%',
         height: '60px',
         color: 'white',
         background: '#01B574',
