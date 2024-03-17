@@ -1,16 +1,17 @@
 .cityContainer {
     display: flex;
     flex-direction: column;
-    margin-top: 100px;
 }
 
 .cityHeader {
     font-size: 40px;
     font-weight: bold;
+    padding: 20px;
 }
 
 .cityItemContainer {
     display: flex;
+    width: 350px;
     flex-direction: column;
     flex-wrap: wrap;
     justify-content: space-between;
