@@ -49,7 +49,7 @@ const MyLocationMap: React.FC<Props> = ({ apiKey }) => {
             scaledSize: new window.google.maps.Size(50, 50),
           },
           {
-            url: 'https://raw.githubusercontent.com/gudzineviciusv/eth-london2024/96f271b9c0394b37abdbcc86153d7451c2831477/src/assets/images/icons/5.png', // Replace with your icon URL
+            url: 'https://raw.githubusercontent.com/gudzineviciusv/eth-london2024/7c99186f262fc1a2bbd089c22505155fd9d7f32e/src/assets/images/icons/target.svg', // Replace with your icon URL
             scaledSize: new window.google.maps.Size(50, 50),
           }
         ];
