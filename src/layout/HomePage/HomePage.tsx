@@ -81,6 +81,7 @@ const HomePage: FC = () => {
             <div className={styles.greenLineBreak}></div>
             <div className={styles.ourTeamContainer}>
             <div className={styles.ourTeamHeader}>Our Team</div>
+            <div className={styles.ourTeamImage}/><img src="https://raw.githubusercontent.com/gudzineviciusv/eth-london2024/96f271b9c0394b37abdbcc86153d7451c2831477/src/assets/images/team.png"/>
             </div>
         </div>
     );
