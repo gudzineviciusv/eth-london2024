@@ -39,17 +39,17 @@ const MyLocationMap: React.FC<Props> = ({ apiKey }) => {
 
     if (isLoaded) {
         userLocationIcon = {
-          url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz9Bw9gDD2AvoH3hkRNMPP5IB-4fqNljfWVAQDhccJ2A&s', // Replace with your icon URL
+          url: 'https://raw.githubusercontent.com/gudzineviciusv/eth-london2024/96f271b9c0394b37abdbcc86153d7451c2831477/src/assets/images/icons/3.png', // Replace with your icon URL
           scaledSize: new window.google.maps.Size(40, 40),
         };      
 
         randomLocationIcons = [
           {
-            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz9Bw9gDD2AvoH3hkRNMPP5IB-4fqNljfWVAQDhccJ2A&s', // Replace with your icon URL
+            url: 'https://raw.githubusercontent.com/gudzineviciusv/eth-london2024/96f271b9c0394b37abdbcc86153d7451c2831477/src/assets/images/icons/4.png', // Replace with your icon URL
             scaledSize: new window.google.maps.Size(50, 50),
           },
           {
-            url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTz9Bw9gDD2AvoH3hkRNMPP5IB-4fqNljfWVAQDhccJ2A&s', // Replace with your icon URL
+            url: 'https://raw.githubusercontent.com/gudzineviciusv/eth-london2024/96f271b9c0394b37abdbcc86153d7451c2831477/src/assets/images/icons/5.png', // Replace with your icon URL
             scaledSize: new window.google.maps.Size(50, 50),
           }
         ];
@@ -105,7 +105,6 @@ const MyLocationMap: React.FC<Props> = ({ apiKey }) => {
         {myLocation && (
           <Marker
             position={myLocation}
-            label="You are here"
             icon={userLocationIcon} // Use custom icon for user's location
           />
         )}
