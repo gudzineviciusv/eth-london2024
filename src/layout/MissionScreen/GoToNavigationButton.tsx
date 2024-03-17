@@ -1,3 +1,4 @@
+import useStakingContract from 'hooks/useStakingContract';
 import React from 'react';
 
 const styles = {
@@ -21,9 +22,14 @@ const styles = {
 }
 
 const GoToNavigationButton: React.FC = () => {
+    const { claimStake } = useStakingContract();
+
+    const handleClaim = async () => {
+        await claimStake();
+    }
     return (
-        <div style={styles.container}>
-            Go to navigation
+        <div style={styles.container} onClick={handleClaim}>
+            Claim your stake
         </div>
     );
 }

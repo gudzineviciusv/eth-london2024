@@ -54,7 +54,7 @@ const ChallengeItem: React.FC<ChallengeItemsProps> = ({ address, city, amount, d
 
 
     const handleClick = async () => {
-       await  stake('0x9D7990cC034173c69a26cA7098B6DaFA3313bD36', 0.00005);
+       await  stake(0.00005);
         navigate(`/mission/${address}`);
     };
 
